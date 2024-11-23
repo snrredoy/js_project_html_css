@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+body{
+  margin: 0;
+  background-color: lightsalmon;
+  height: 100vh;
+}
+h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Chewy", system-ui;
+}
