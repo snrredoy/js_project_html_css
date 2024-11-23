@@ -1,0 +1,36 @@
+.cricket_game {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .bat,
+  .ball,
+  .stump,
+  .reset {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin: 10px;
+  }
+
+  .bat:hover,
+  .ball:hover,
+  .stump:hover,
+  .reset:hover {
+    background-color: cadetblue;
+    cursor: pointer;
+  }
+
+  .result {
+    font-size: 1.5rem;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .count {
+    font-size: 1.5rem;
+    margin: 10px;
+    text-align: center;
+}

@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+  }
+  span {
+    background-image: url(images/heart.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: heart-trail-animation 10s linear;
+    overflow: hidden;
+  }
+
+  i {
+    background-image: url(https://cdn2.iconfinder.com/data/icons/lin/128/14.png);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-45%, -45%);
+    pointer-events: none;
+    animation: heart-trail-animation 10s linear;
+    overflow: hidden;
+  }
+
+  @keyframes heart-trail-animation {
+    0% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      filter: hue-rotate(0);
+    }
+
+    100% {
+      transform: translate(-50%, -5000%);
+      opacity: 0;
+      filter: hue-rotate(360deg);
+    }
+  }

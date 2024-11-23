@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center; color: cadetblue; font-size: 3rem">
+      Bat Ball Stump Game
+    </h1>
+    <div class="cricket_game">
+      <button class="bat game" onclick="gameWinner('Bat')">Bat</button>
+      <button class="ball game" onclick="gameWinner('Ball')">Ball</button>
+      <button class="stump game" onclick="gameWinner('Stump')">Stump</button>
+      <button class="reset game" onclick="localStorage.clear(); resetCount(); ">
+        Reset
+      </button>
+    </div>
+    <div class="result">
+      <p class="yourResult"></p>
+      <p class="computerResult"></p>
+      <p class="finalResult"></p>
+    </div>
+    <div class="count">
+      <p>Win: <span id="winCount" style="color: green">0</span></p>
+      <p>Draw: <span id="drawCount" style="color: black">0</span></p>
+      <p>Lose: <span id="loseCount" style="color: red">0</span></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

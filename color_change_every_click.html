@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Ball</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="ball" onclick="clickCountNumber() ; changeColor()"></button>
+
+    <script>
+      let ball = document.querySelector(".ball");
+
+      let clickCount = localStorage.getItem("clickCount") || 0;
+      function clickCountNumber() {
+        clickCount++;
+        localStorage.setItem("clickCount", clickCount);
+        ball.innerText = clickCount;
+        // let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        // ball.style.backgroundColor = "#" + randomColor;
+        // ball.style.color = "white";
+      }
+      function changeColor() {
+        // if (clickCount % 2 === 0) {
+        //   ball.style.backgroundColor = "green";
+        //   ball.style.color = "white";
+        // } else {
+        //   ball.style.backgroundColor = "red";
+        //   ball.style.color = "white";
+        // }
+        if (clickCount % 10 === 0) {
+          ball.style.backgroundColor = "red";
+          ball.style.color = "white";
+        } else if (clickCount % 10 === 1) {
+          ball.style.backgroundColor = "green";
+          ball.style.color = "white";
+        } else if (clickCount % 10 === 2) {
+          ball.style.backgroundColor = "blue";
+          ball.style.color = "white";
+        } else if (clickCount % 10 === 3) {
+          ball.style.backgroundColor = "yellow";
+          ball.style.color = "black";
+        } else if (clickCount % 10 === 4) {
+          ball.style.backgroundColor = "purple";
+          ball.style.color = "white";
+        } else if (clickCount % 10 === 5) {
+          ball.style.backgroundColor = "orange";
+          ball.style.color = "black";
+        } else if (clickCount % 10 === 6) {
+          ball.style.backgroundColor = "pink";
+          ball.style.color = "black";
+        } else if (clickCount % 10 === 7) {
+          ball.style.backgroundColor = "teal";
+          ball.style.color = "white";
+        } else if (clickCount % 10 === 8) {
+          ball.style.backgroundColor = "brown";
+          ball.style.color = "white";
+        } else if (clickCount % 10 === 9) {
+          ball.style.backgroundColor = "gray";
+          ball.style.color = "white";
+        }
+        ball.innerText = clickCount;
+      }
+      changeColor();
+    </script>
+  </body>
+</html>
